@@ -1,33 +1,4 @@
-<html><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/extend-native-history-api.js"></script><script src="chrome-extension://eppiocemhmnlbhjplcgkofciiegomcon/libs/requests.js"></script><head><script type="text/javascript" charset="utf-8" async="" src="https://ssl.p.jwpcdn.com/player/v/8.30.1/jwpsrv.js"></script><script>
-  // Function to perform the redirection after 2 minutes
-  function redirectToRandomURL() {
-      // Check if the redirection has already occurred for this user
-      var redirected = localStorage.getItem('redirected');
 
-      if (!redirected) {
-          // Generate a random number between 0 and 1
-          var randomValue = Math.random();
-
-          // Decide the redirection based on a 50% chance for each URL
-          if (randomValue < 0.5) {
-              // Redirect to the first URL
-              window.location.href = '';
-          } else {
-              // Redirect to the second URL
-              window.location.href = '';
-          }
-
-          // Set a flag in localStorage to indicate redirection has occurred
-          localStorage.setItem('redirected', 'true');
-      }
-  }
-
-  // Set a timeout for 2 minutes after the page has fully loaded
-  window.onload = function() {
-      setTimeout(redirectToRandomURL, 20000); //  minutes in milliseconds
-  };
-
-        </script>
 
 
 
